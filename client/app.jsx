@@ -6,8 +6,8 @@ function App() {
   const [count, setCount] = useState(1);
 
   useEffect(() => {
-    console.log('side effect')
-  }, [])
+    console.log('side effect');
+  }, []);
 
 
   return (
@@ -15,7 +15,7 @@ function App() {
       <div>
         {count}
       </div>
-      <button type='button' onClick={() => setCount(count + 1)} >Increment</button>
+      <button type='button' onClick={() => setCount((currentCount) => currentCount + 1)} >Increment</button>
       <button type='button' onClick={() => setCount(count - 1)} >Decrement</button>
     </div>
   )
