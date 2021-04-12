@@ -1,3 +1,8 @@
+* {
+  margin: 10px;
+  padding: 5px;
+}
+
 button {
   background: lightblue;
   margin: 5px;
