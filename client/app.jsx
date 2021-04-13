@@ -1,9 +1,12 @@
 import React, { useState, useEffect, useRef } from 'react';
 import ReactDOM from 'react-dom';
+import { useForm } from './useForm.jsx';
 
 function App() {
 
   const [{count, count2}, setCount] = useState({ count: 0, count2: 0});
+
+  const [values, handleChange] = useForm({email: '', password: ''});
 
   useEffect(() => {
     console.log('side effect');
@@ -12,6 +15,8 @@ function App() {
 
   return (
     <div className='main-app'>
+      <input name="email" value={values.email} onChange={handleChange} />
+      <input type="password" name="password" value={values.password} onChange={handleChange} />
       <div>
         Count: {count}
       </div>
